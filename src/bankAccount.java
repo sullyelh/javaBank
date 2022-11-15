@@ -3,12 +3,10 @@ import java.util.Scanner;
 class bankAccount {
     int balance;
     int previousTransaction;
-    public static String customerName;
-    public static int customerPin;
+    String customerName;
+    int customerPin;
 
-    bankAccount(String cname, int cpin) {
-        customerName = cname;
-        customerPin = cpin;
+    public bankAccount(Scanner createAccScan, Scanner createPinScan) {
     }
 
     void deposit (int amount) {
@@ -36,7 +34,7 @@ class bankAccount {
         }
     }
 
-    void showMenu() {
+    String showMenu() {
         char option;
         Scanner scanner = new Scanner(System.in);
 
@@ -95,5 +93,6 @@ class bankAccount {
         }
         while (option != 'E');
         System.out.println("Thank You!");
+        return null;
     }
 }
