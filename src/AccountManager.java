@@ -6,12 +6,12 @@ public class AccountManager {
 
     String accountCreateSuccessMessage = "Successfully created Account";
 
-    public String createAccount() {
+    public void createAccount() {
         bankAccount a = new bankAccount(createAccScan, createPinScan);
         System.out.println("Enter your Account Name: ");
         a.customerName = createAccScan.next();
         System.out.println("Enter your Account Pin: ");
         a.customerPin = createPinScan.nextInt();
-        return a.showMenu();
+        a.showMenu();
     }
 }
